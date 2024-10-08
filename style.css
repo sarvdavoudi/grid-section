@@ -74,7 +74,7 @@ body {
 .card-desc {
   color: var(--mainColor);
 }
-.card-profile-info :last-child {
+.card-profile-info p:last-child {
   color: var(--mainColor);
 }
 .card.patrick {
@@ -97,9 +97,9 @@ h3 {
   margin: 1rem 0 1rem 0;
 }
 
-.card.daniel .card-profile-info :first-child,
-.card.jonathan .card-profile-info :first-child,
-.card.patrick .card-profile-info :first-child {
+.card.daniel .card-profile-info p:first-child,
+.card.jonathan .card-profile-info p:first-child,
+.card.patrick .card-profile-info p:first-child {
   color: var(--textColorForDarkBackground);
 }
 @media (max-width: 1240px) {
