@@ -1,0 +1,116 @@
+:root {
+  --backgroundColor: rgb(228, 239, 243);
+  --textColorForDarkBackground: white;
+  --textColorForLightBackground: black;
+  --mainColor: rgb(163, 158, 158);
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+@font-face {
+  font-family: Roboto-Regular;
+  src: url(./fonts/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: Roboto-Thin;
+  src: url(./fonts/Roboto-Thin.ttf);
+}
+
+html {
+  font-size: 15px;
+}
+body {
+  font-family: Roboto-Regular;
+  font-size: 1rem;
+}
+
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--backgroundColor);
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  width: 80%;
+  margin: auto;
+}
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card-header > img {
+  border-radius: 50%;
+}
+.card {
+  border: none;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.card.daniel {
+  grid-column: span 2;
+  background-color: blueviolet;
+  background-image: url(./images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.card.daniel h3,
+.card.jonathan h3,
+.card.card.patrick h3 {
+  color: var(--textColorForDarkBackground);
+  font-weight: 300;
+}
+.card-desc {
+  color: var(--mainColor);
+}
+.card-profile-info :last-child {
+  color: var(--mainColor);
+}
+.card.patrick {
+  grid-column: span 2;
+  background-color: rgb(2, 2, 37);
+}
+.card.kira {
+  grid-row: span 2;
+  background-color: white;
+}
+.card.jeanette {
+  background-color: white;
+}
+
+.card.jonathan {
+  background-color: rgb(51, 61, 75);
+}
+
+h3 {
+  margin: 1rem 0 1rem 0;
+}
+
+.card.daniel .card-profile-info :first-child,
+.card.jonathan .card-profile-info :first-child,
+.card.patrick .card-profile-info :first-child {
+  color: var(--textColorForDarkBackground);
+}
+@media (max-width: 800px) {
+  .card-container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+  .card.daniel,
+  .card.jonathan,
+  .card.kira,
+  .card.jeanette,
+  .card.patrick {
+    grid-column: span 1;
+  }
+}
