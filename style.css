@@ -4,6 +4,7 @@
   --textColorForLightBackground: black;
   --mainColor: rgb(163, 158, 158);
 }
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -39,7 +40,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 3rem;
   width: 80%;
-  margin:6rem auto;
+  margin: 6rem auto;
 }
 .card-header {
   display: flex;
@@ -58,12 +59,27 @@ body {
     rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
-.card.daniel {
+
+.card-container > *:nth-child(1) {
   grid-column: span 2;
   background-color: blueviolet;
   background-image: url(./images/bg-pattern-quotation.svg);
   background-repeat: no-repeat;
   background-position: top right;
+}
+.card-container > *:nth-child(2) {
+  background-color: rgb(51, 61, 75);
+}
+.card-container > *:nth-child(3) {
+  grid-row: span 2;
+  background-color: white;
+}
+.card-container > *:nth-child(5) {
+  grid-column: span 2;
+  background-color: rgb(2, 2, 37);
+}
+.card-container > *:nth-child(4) {
+  background-color: white;
 }
 .card.daniel h3,
 .card.jonathan h3,
@@ -77,29 +93,13 @@ body {
 .card-profile-info p:last-child {
   color: var(--mainColor);
 }
-.card.patrick {
-  grid-column: span 2;
-  background-color: rgb(2, 2, 37);
-}
-.card.kira {
-  grid-row: span 2;
-  background-color: white;
-}
-.card.jeanette {
-  background-color: white;
-}
-
-.card.jonathan {
-  background-color: rgb(51, 61, 75);
-}
 
 h3 {
   margin: 1rem 0 1rem 0;
 }
-
-.card.daniel .card-profile-info p:first-child,
-.card.jonathan .card-profile-info p:first-child,
-.card.patrick .card-profile-info p:first-child {
+.card.daniel .card-profile-info > *:first-child,
+.card.jonathan .card-profile-info > *:first-child,
+.card.patrick .card-profile-info > *:first-child {
   color: var(--textColorForDarkBackground);
 }
 @media (max-width: 1240px) {
